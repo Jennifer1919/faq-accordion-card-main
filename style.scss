@@ -1,0 +1,131 @@
+*{
+    padding: 0px 0px;
+    margin: 0px 0px;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+body{
+    min-height: 100vh;  /*I set the height to min-height=100vh so that the page can be reponsive and the text
+    doesn't overflow fron the white area depending on the device size and so that the linear gradient always fits the whole page*/
+    padding: 80px 30px;
+    background-image: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+
+    main{
+        
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        border-radius:10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        box-shadow: 0px 10px 20px 3px rgba(0, 0, 0, 0.438) ;
+
+        img[id="woman-computer"]{
+            position:relative;
+            bottom: 100px;
+            right:10px
+            
+        }
+
+        section[id="faq"]{
+            width: 100%;
+            padding: 0px 30px 50px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-items: center;
+
+            h1{
+                font-size: 2.5em;
+                font-weight: 700;
+                margin-bottom: 20px;
+                color: hsl(238, 29%, 16%);
+                text-align: center;
+            }
+
+            section{
+                border-bottom:1px solid  hsl(240, 5%, 91%);
+                padding-bottom: 10px;
+
+                p{
+                    padding:10px 0px;
+                    display:flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    color: hsl(237, 12%, 33%);
+
+                    img{
+                        width: 20px;
+                        height:15px;
+                        
+                    }
+                    img.selectedArrow{
+                        transform: rotate(180deg);
+                    }
+                }
+                .selectedQuestion{
+                    font-weight: 700;
+                }
+
+                article{
+                    color: hsl(240, 6%, 50%);
+                }
+                
+                .articleHidden{ //only to show or hide the article selected
+                    display:none;
+                }
+            }
+        }
+
+    }
+
+}
+
+@media(min-width:900px){
+
+    body{
+        height:100vh;
+        padding: 10% 15%;
+
+        main{
+            display:grid;
+            grid-template-columns: 50% 50%;
+            justify-items: left;
+            align-items: center;
+            background-image: url(images/bg-pattern-desktop.svg);
+            background-size: 70%;
+            background-repeat: no-repeat;
+            background-position-x: -110%;
+            background-position-y: 60%;
+
+            section[id="faq"]{
+
+                padding: 0px 50px 0px 0px;
+
+                h1{
+                    text-align: left;
+                }
+
+            }
+            img[id="woman-computer"]{
+               width: 100%;
+               top:1%;
+               right:20%;
+                
+            }
+            
+
+
+
+        }
+    }
+}

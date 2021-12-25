@@ -1,0 +1,155 @@
+* {
+  padding: 0px 0px;
+  margin: 0px 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+body {
+  min-height: 100vh;
+  /*I set the height to min-height=100vh so that the page can be reponsive and the text
+    doesn't overflow fron the white area depending on the device size and so that the linear gradient always fits the whole page*/
+  padding: 80px 30px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background-image: linear-gradient(#af67e9, #6565e7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+body main {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -webkit-box-shadow: 0px 10px 20px 3px rgba(0, 0, 0, 0.438);
+          box-shadow: 0px 10px 20px 3px rgba(0, 0, 0, 0.438);
+}
+
+body main img[id="woman-computer"] {
+  position: relative;
+  bottom: 100px;
+  right: 10px;
+}
+
+body main section[id="faq"] {
+  width: 100%;
+  padding: 0px 30px 50px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  justify-items: center;
+}
+
+body main section[id="faq"] h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1d1e35;
+  text-align: center;
+}
+
+body main section[id="faq"] section {
+  border-bottom: 1px solid #e7e7e9;
+  padding-bottom: 10px;
+}
+
+body main section[id="faq"] section p {
+  padding: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #4a4b5e;
+}
+
+body main section[id="faq"] section p img {
+  width: 20px;
+  height: 15px;
+}
+
+body main section[id="faq"] section p img.selectedArrow {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+body main section[id="faq"] section .selectedQuestion {
+  font-weight: 700;
+}
+
+body main section[id="faq"] section article {
+  color: #787887;
+}
+
+body main section[id="faq"] section .articleHidden {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  body {
+    height: 100vh;
+    padding: 10% 15%;
+  }
+  body main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    justify-items: left;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position-x: -110%;
+    background-position-y: 60%;
+  }
+  body main section[id="faq"] {
+    padding: 0px 50px 0px 0px;
+  }
+  body main section[id="faq"] h1 {
+    text-align: left;
+  }
+  body main img[id="woman-computer"] {
+    width: 100%;
+    top: 1%;
+    right: 20%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
