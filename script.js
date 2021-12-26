@@ -5,8 +5,12 @@ for (var i = 0; i < questions.length; i++) {
     questions[i].addEventListener('click', function(){
         var arrow = this.children[0];
         var answer = this.nextElementSibling;
+
+        this.classList.toggle("selectedQuestion");
+        arrow.classList.toggle("selectedArrow");
+        answer.classList.toggle("articleHidden");
         
-        // Question font weight changes
+        /* Question font weight changes
         if(this.classList.contains('selectedQuestion') === false){
             this.classList.add('selectedQuestion');
          } else {
@@ -25,7 +29,7 @@ for (var i = 0; i < questions.length; i++) {
             answer.classList.remove('articleHidden');
         } else {
             answer.classList.add('articleHidden');
-        }
+        }*/
 
         
         
